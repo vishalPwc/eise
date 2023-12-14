@@ -1,0 +1,38 @@
+[
+    {
+        "orderId":"000000022",
+        "requestId":"1111111111",
+        "date":"2018.03.01",
+        "orderType":"SHIPMENT",
+        "amount":"300"
+    },
+    {
+        "orderId":"000000022",
+        "requestId":"2222222222",
+        "date":"2018.03.21",
+        "orderType":"SHIPMENT",
+        "amount":"128"
+    },
+    {
+        "orderId":"000000022",
+        "requestId":"3333333333",
+        "orderType":"SHIPMENT",
+        "date":"2018.03.21",
+        "amount":"150"
+    },
+    {
+        "orderId":"000000022",
+        "requestId":"4444444444",
+        "date":"2018.04.02",
+        "orderType":"REFUND",
+        "amount":"100"
+    },
+    {
+        "orderId":"000000022",
+        "requestId":"55555555555",
+        "date":"2018.04.21",
+        "orderType":"REFUND",
+        "amount":"110"
+    }
+    
+]

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+.header {
+    width: 100%;
+    min-height: 70px;
+    background-color:#ffffff;
+    position: relative;
+    z-index: 1201;
+    transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+    box-shadow:  0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);;
+
+}
+
+.main_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.aside {
+    min-height: 100%;
+    width: 70px;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    background-color: #264d73;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main_body {
+    min-height: 100%;
+    width: 100%;
+    padding:10px;
+}
+
+.tableData {
+    display: flow-root;
+    border-collapse: collapse;
+    width: 39%;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid darkgray;
+}
+
+.tableData tr th{
+    padding-right: 0;
+    padding: 12px;
+    color: white;
+}
+
+
+.tableData tr td{
+    padding-right: 0;
+    padding: 10px;
+}
+
+.invoiceSummary {
+    display: flow-root;
+    border-collapse: collapse;
+    width: 82%;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid darkgray;   
+}
+
+
+.invoiceSummary tr th{
+    padding-right: 0;
+    padding: 12px;
+    color: white;
+}
+
+.invoiceSummary tr td{
+    padding-right: 0;
+    padding: 10px;
+}
+
+.invoiceDetail {
+    display: flow-root;
+    border-collapse: collapse;
+    width: 100;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid darkgray;   
+}
+
+.invoiceDetail tr th{
+    padding-right: 0;
+    padding: 12px;
+    color: white;
+    vertical-align: top;
+    border: none;
+}
+
+.invoiceDetail tr td{
+    padding-right: 0;
+    padding: 10px;
+}
+
+.aside .file:hover {
+    background-color: darkcyan;
+}
+
+.file {
+    height: 50px;
+}
+
+.aside i {
+    position: relative;
+   top: 15px;
+}
+
+.tableInv tr td,th {
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.faAngle {
+    cursor: pointer;
+}

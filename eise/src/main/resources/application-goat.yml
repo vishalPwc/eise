@@ -1,0 +1,59 @@
+spring:
+  profiles: 
+    active: GOAT
+  application:
+    name: eise
+  datasource: 
+        jndiName: 'EISEDB'
+    
+#JWT Config
+jwt: 
+  secret: e287cd9e2f114bc1b4687d5c32d25c95
+  get: 
+    token: 
+      uri: /api/authenticate
+  expiry: 28800
+      
+external:
+   sys: mao
+   
+mao:
+  username: eise
+  password: ZWFnbGU=
+  
+aesToken:
+  key: 7Npc3RLrpd76  
+  
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+  error:
+    whitelabel:
+      enabled:  false
+      
+logging:
+  level:
+    org.springframework: ERROR
+    com.aafes.returns: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+    file: "%d %p %c{1.} [%t] %m%n"
+  file: logs/file.log      
+
+
+eisesso:
+  redirecturl: redirect test
+ 
+pagination:
+  reportlist: 10
+     
+#SAML properties
+
+saml:
+    sso:
+        idp:
+            metadata-location: classpath:/saml/FederationMetadata.xml
+        metadata-generator:
+            entity-id: goat-ecsettle-app.ecomint.aafes.com
+        key-manager:
+            private-key-der-location: 'file:/opt/app/nfs/GOAT/JKS/saml/private-adfs.der'
+            public-key-pem-location: 'file:/opt/app/nfs/GOAT/JKS/saml/aafes_leaf.cer'
+        default-success-url: /home

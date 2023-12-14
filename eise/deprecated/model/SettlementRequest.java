@@ -1,0 +1,233 @@
+package com.aafes.settlement.Invoice.model;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class SettlementRequest {
+
+	@JsonProperty("OrderId")
+	private String					orderId;
+
+	@JsonProperty("comment")
+	private String					comment;
+
+	@JsonProperty("PaymentHeader")
+	private List<PaymentHeader>		paymentHeader;
+
+	@JsonProperty("OrderLine")
+	private List<OrderLine>			orderLine;
+
+	@JsonProperty("OrderChargeDetail")
+	private List<OrderChargeDetail>	OrderChargeDetail;
+
+	/*
+	 * @JsonProperty("Extended") private Extended extended;
+	 */
+	@JsonProperty("OpenInvoice")
+	private List<OpenInvoice>		openInvoice;
+
+	@JsonProperty("OrderTotal")
+	private Double					orderTotal;
+
+	@JsonProperty("FulfillmentStatus")
+	private String					fulfillmentStatus;
+
+	@JsonProperty("MinFulfillmentStatusId")
+	private String					minFulfillmentStatusId;
+
+	@JsonProperty("MaxFulfillmentStatusId")
+	private String					maxFulfillmentStatusId;
+
+	@JsonProperty("ClosedInvoices")
+	private List<OpenInvoice>		closedInvoices;
+
+	@JsonProperty("OpenAuthReversal")
+	private List<OpenAuthReversal>	openAuthReversal;
+
+	/**
+	 * @return the orderId
+	 */
+	public String getOrderId() {
+		return orderId;
+	}
+
+	/**
+	 * @param orderId
+	 *            the orderId to set
+	 */
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	/**
+	 * @return the comment
+	 */
+	public String getComment() {
+		return comment;
+	}
+
+	/**
+	 * @param comment
+	 *            the comment to set
+	 */
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	/**
+	 * @return the paymentHeader
+	 */
+	public List<PaymentHeader> getPaymentHeader() {
+		return paymentHeader;
+	}
+
+	/**
+	 * @param paymentHeader
+	 *            the paymentHeader to set
+	 */
+	public void setPaymentHeader(List<PaymentHeader> paymentHeader) {
+		this.paymentHeader = paymentHeader;
+	}
+
+	/**
+	 * @return the orderLine
+	 */
+	public List<OrderLine> getOrderLine() {
+		return orderLine;
+	}
+
+	/**
+	 * @param orderLine
+	 *            the orderLine to set
+	 */
+	public void setOrderLine(List<OrderLine> orderLine) {
+		this.orderLine = orderLine;
+	}
+
+	/**
+	 * @return the orderChargeDetail
+	 */
+	public List<OrderChargeDetail> getOrderChargeDetail() {
+		return OrderChargeDetail;
+	}
+
+	/**
+	 * @param orderChargeDetail
+	 *            the orderChargeDetail to set
+	 */
+	public void setOrderChargeDetail(
+			List<OrderChargeDetail> orderChargeDetail
+	)
+	{
+		OrderChargeDetail = orderChargeDetail;
+	}
+
+	/**
+	 * @return the openInvoice
+	 */
+	public List<OpenInvoice> getOpenInvoice() {
+		return openInvoice;
+	}
+
+	/**
+	 * @param openInvoice
+	 *            the openInvoice to set
+	 */
+	public void setOpenInvoice(List<OpenInvoice> openInvoice) {
+		this.openInvoice = openInvoice;
+	}
+
+	/**
+	 * @return the orderTotal
+	 */
+	public Double getOrderTotal() {
+		return orderTotal;
+	}
+
+	/**
+	 * @param orderTotal
+	 *            the orderTotal to set
+	 */
+	public void setOrderTotal(Double orderTotal) {
+		this.orderTotal = orderTotal;
+	}
+
+	/**
+	 * @return the fulfillmentStatus
+	 */
+	public String getFulfillmentStatus() {
+		return fulfillmentStatus;
+	}
+
+	/**
+	 * @param fulfillmentStatus
+	 *            the fulfillmentStatus to set
+	 */
+	public void setFulfillmentStatus(String fulfillmentStatus) {
+		this.fulfillmentStatus = fulfillmentStatus;
+	}
+
+	/**
+	 * @return the minFulfillmentStatusId
+	 */
+	public String getMinFulfillmentStatusId() {
+		return minFulfillmentStatusId;
+	}
+
+	/**
+	 * @param minFulfillmentStatusId
+	 *            the minFulfillmentStatusId to set
+	 */
+	public void setMinFulfillmentStatusId(String minFulfillmentStatusId) {
+		this.minFulfillmentStatusId = minFulfillmentStatusId;
+	}
+
+	/**
+	 * @return the maxFulfillmentStatusId
+	 */
+	public String getMaxFulfillmentStatusId() {
+		return maxFulfillmentStatusId;
+	}
+
+	/**
+	 * @param maxFulfillmentStatusId
+	 *            the maxFulfillmentStatusId to set
+	 */
+	public void setMaxFulfillmentStatusId(String maxFulfillmentStatusId) {
+		this.maxFulfillmentStatusId = maxFulfillmentStatusId;
+	}
+
+	/**
+	 * @return the closedInvoices
+	 */
+	public List<OpenInvoice> getClosedInvoices() {
+		return closedInvoices;
+	}
+
+	/**
+	 * @param closedInvoices
+	 *            the closedInvoices to set
+	 */
+	public void setClosedInvoices(List<OpenInvoice> closedInvoices) {
+		this.closedInvoices = closedInvoices;
+	}
+
+	/**
+	 * @return the openAuthReversal
+	 */
+	public List<OpenAuthReversal> getOpenAuthReversal() {
+		return openAuthReversal;
+	}
+
+	/**
+	 * @param openAuthReversal
+	 *            the openAuthReversal to set
+	 */
+	public void setOpenAuthReversal(List<OpenAuthReversal> openAuthReversal) {
+		this.openAuthReversal = openAuthReversal;
+	}
+
+}

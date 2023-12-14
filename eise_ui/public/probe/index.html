@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <script>
+      function probeGetData() {
+        alert("ra");
+        // Creating the XMLHttpRequest object
+        var request = new XMLHttpRequest();
+
+        // Instantiating the request object
+        request.open("GET", "http://182.72.15.234:8002/probe");
+        console.log(request);
+      }
+      probeGetData();
+    </script>
+  </body>
+</html> -->
+<html>
+  <head>
+    <meta content="text/html; charset = ISO-8859-1" http-equiv="content-type" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="../../env.js" type="text/javascript"></script> 
+  </head>
+
+  <body>
+    <p>Status : <span id="spanSucess"></span></p>
+  <script type="application/javascript">
+       let url_env = getENV();
+	   //alert("probe env->"+url_env)
+	   
+	   let url;
+	   
+	   if (url_env === 'dev') {
+		  url = "https://cdc-eagle-ecreturns-app.ecomint.aafes.com:3003/eise/probe";
+		 } 
+		 else if (url_env === 'eagle_hqs') {
+		  url = "https://hqs-eagle-ecsettle-app.ecomint.aafes.com/eise/probe";
+		 }
+		 else if (url_env === 'eagle_cdc') {
+		   url = "https://cdc-eagle-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+		 else if (url_env === 'fox_hqs') {
+		  url = "https://hqs-fox-ecsettle-app.ecomint.aafes.com/eise/probe";
+		 }
+		 else if (url_env === 'fox_cdc') {
+		   url = "https://cdc-fox-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }     
+     else if (url_env === 'goat_hqs') {
+		   url = "https://hqs-goat-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'goat_cdc') {
+		   url = "https://cdc-goat-ecsettle-app.ecomint.aafes.com/eise/probe";
+		 }
+     else if (url_env === 'perf_hqs') {
+		   url = "https://hqs-perf-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'perf_cdc') {
+		   url = "https://cdc-perf-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'prod_hqs') {
+		   url = "https://hqs-prod-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'prod_cdc') {
+		   url = "https://cdc-prod-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'patch_hqs') {
+		   url = "https://hqs-patch-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else if (url_env === 'patch_cdc') {
+		   url = "https://cdc-patch-ecsettle-app.ecomint.aafes.com/eise/probe";
+     }
+     else {
+		  alert("probe ENV (" + url_env + ") Details not found. Please specify the ENV in Apache");
+		 }
+      
+      $.ajax({
+        url: url,
+        success: function(result, status) {
+          console.log(status);
+          $("#spanSucess").html(status);
+        }, error: function(){
+              $("#spanSucess").html("Failure");
+        }
+      });
+    </script>
+  </body>
+</html>
